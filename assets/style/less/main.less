@@ -1,0 +1,382 @@
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+
+/* Base Styles */
+
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+html {
+  background-color: #F7F7F7;
+  min-height: 100%;
+  height: auto;
+}
+
+body  {
+  font-family: Lato, 'Helvetica Nueue', Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 160%;
+  color: #555459;
+  line-height: 1.5rem;
+  background-color: #F7F7F7;
+}
+
+.main {
+  background: white;
+  width: 100%;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 40px;
+  text-align: center;
+  position: relative;
+  opacity: .95;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 1px 0 rgba(0,0,0,.25);
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', serif;
+  font-weight: 100;
+  text-shadow: 1px 1px rgb(255,255,255, 1);
+  /*color: brown;*/
+}
+
+a {
+  color: #2D8BCF;
+  font-family: Lato, 'Helvetica Nueue', Helvetica, Arial, sans-serif;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+h1{
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 100%;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  font-weight: 700;
+  font-family: Lato,appleLogo,sans-serif;
+  margin: 0 0 1rem;
+}
+
+h2{
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 90%;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+h3{
+  margin-top: 0;
+  line-height: 110%;
+  margin-bottom: 5px;
+}
+
+p {
+}
+
+a.small {
+  line-height: 100%;
+  font-size: .9rem;
+}
+
+.branding {
+  float: left;
+  margin: 10px;
+  margin-left: 20px;
+
+  a {
+    width: 80%;
+    font-size: 1.6em;
+    text-align: left;
+    color: #1B7998;
+    text-decoration: none;
+    text-align: left;
+  }
+
+  img {
+    padding-left: 5px;
+    margin-bottom: 10px;
+  }
+
+}
+
+nav {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+  ul {
+    /*width: 60%;*/
+    float: right;
+    padding-left: 10px;
+    margin-bottom: 0px;
+    li {
+      float: left;
+      color: #145266;
+      font-family: Lato, 'Helvetica Nueue', Helvetica, Arial, sans-serif;
+      margin: 10px 0;
+      font-size: 1.2em;
+
+      a {
+        float: left;
+        text-decoration: none;
+        padding: 10px 10px;
+        border-radius: 4px;
+        &:hover {
+          color: #E76C5A;
+        }
+      }
+
+    }
+  }
+}
+
+/**
+* Hotels view
+*/
+.hotels_headline {
+  margin-bottom: 15px;
+  img, h2 {
+    display: inline;
+
+  }
+  span {
+    cursor: pointer;
+    &:hover {
+      color: #a50500;
+      transition: 1s;
+    }
+  }
+
+}
+.type_selected {
+  color: coral;
+}
+
+.del-button {
+  margin: auto;
+  display: block;
+}
+
+.brands_panel {
+  //display: none;
+  margin-bottom: 20px;
+}
+
+.hotel_name {
+  cursor: pointer;
+  &:hover {
+    color: #E76C5A;
+  }
+}
+
+/**
+* Hotel View
+*/
+
+.hotel_wrapper {
+  width: 60%;
+  margin: auto;
+
+  .hotel_head {
+    h1 {
+      span {
+        float: right;
+        cursor: pointer;
+        &:hover {
+          color: saddlebrown;
+        }
+      }
+
+    }
+  }
+  .address, .desc, .amenities {
+    text-align: left;
+  }
+  h1, h5 {
+    text-align: left;
+  }
+  h5 {
+    font-weight: 400;
+  }
+  .rate_box {
+    float: left;
+    display: block;
+    .ngrateit, span {
+      float: left;
+    }
+    span {
+      padding-left: 5px;
+    }
+  }
+  .address {
+    display: block;
+    clear: both;
+    span, p {
+      float: left;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .desc {
+    p {
+      float: left;
+    }
+  }
+  .hotel_details {
+    p {
+      text-align: left;
+      margin-bottom: 0px;
+    }
+    clear: both;
+  }
+}
+.hotel_img {
+  margin: auto;
+
+  img {
+    opacity: 0.6;
+  }
+
+}
+/**
+* Hotel Edit
+*/
+.input-group {
+  margin:10px;
+}
+.amen_edits {
+  div {
+    padding: 0;
+  }
+  .form-control {
+    border-radius: 0;
+  }
+  span {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+.save_btn {
+  margin: 20px 10px;
+}
+
+/**
+* About.html
+*/
+.about {
+  p, h2, h3 {
+    text-align: left;
+  }
+}
+
+
+@media all and (max-width: 400px) {
+  main {
+    width: 100%;
+  }
+  nav ul {
+    float: none;
+    li {
+      font-size: 1em;
+    }
+  }
+}
+@media all and (max-width: 400px) {
+  nav ul {
+    float: left;
+    li {
+      font-size: 1em;
+    }
+  }
+}
+
+/**
+* Glyphs
+*/
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-search:before {
+  content: "\e003";
+}
+
+.glyphicon-trash:before {
+  content: "\e020";
+}
+.glyphicon-time:before {
+  content: "\e023";
+}
+
+.glyphicon-edit:before {
+  content: "\e065";
+}
+.glyphicon-remove:before {
+  content: "\e014";
+}
+
+.glyphicon-resdassdsmove:before {
+  color: blue;
+}

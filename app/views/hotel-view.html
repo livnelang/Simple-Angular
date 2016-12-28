@@ -1,0 +1,36 @@
+<div class="hotel_wrapper">
+    <!--hotel head-->
+    <div class="hotel_head">
+        <h1>{{hotel.name}}<span ui-sref="hotel-edit({id :hotel['_id']})" class="glyphicon glyphicon-edit"></span></h1>
+    </div>
+
+    <!--rate-->
+    <div class="rate_box">
+        <ng-rate-it ng-model="hotel.details.starRating.val" read-only="true"></ng-rate-it>
+        <span>{{hotel.details.brand.txt}}</span>
+    </div>
+    <!--address-->
+    <div class="address">
+        <span>Address: &nbsp;</span>
+        <p> {{hotel.address.city}}  {{hotel.address.address}}  {{hotel.address.country}}</p>
+    </div>
+    <!--description-->
+    <div class="desc">
+        <p> {{hotel.description}}</p>
+    </div>
+    <!--details-->
+    <div class="hotel_details">
+        <p><span>CheckIn: </span>{{hotel.details.checkIn}}</p>
+        <p><span>CheckOut: </span>{{hotel.details.checkOut}}</p>
+        <p><span>Currency: </span>{{hotel.details.currency}}</p>
+        <p><span>Rooms: </span>{{hotel.details.numOfRooms}}</p>
+    </div>
+    <!--amenities-->
+    <div class="amenities">
+        <p><span>Amenities: </span>{{amenities}}</p>
+    </div>
+    <!--hotel img head-->
+    <div class="hotel_img">
+        <img class="img-thumbnail" src="{{hotel.images[0].url}}">
+    </div>
+</div>

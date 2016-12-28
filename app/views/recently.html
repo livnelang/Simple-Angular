@@ -1,0 +1,24 @@
+<div>
+    <div class="hotels_headline">
+        <h2>Recently visited items</h2>
+    </div>
+
+    <!-- recent-records table -->
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th>Hotel Name</th>
+                <th>Date Visited</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="record in records">
+                <td>{{record.name}}</td>
+                <td>{{record.date}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

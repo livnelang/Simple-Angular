@@ -1,0 +1,48 @@
+<div>
+	<div class="hotels_headline">
+		<h2>Featuring <span ng-class="{type_selected: hotels_list}" ng-click="changeFilter(true)">Hotels </span>/ <span ng-class="{type_selected: !hotels_list}" ng-click="changeFilter(false)">Brands</span></h2>
+	</div>
+	<!--Brands hided list -->
+	<div ng-show="!hotels_list" class="btn-group brands_panel row">
+		<button ng-repeat="brand in brands" type="button" class="btn btn-info col-md-4">{{brand.txt}}</button>
+	</div>
+
+	<!--filter form -->
+	<form>
+		<div class="form-group">
+			<div class="input-group">
+				<div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
+
+				<input type="text" class="form-control" placeholder="{{search_holder.current}}" ng-model="searchFilter">
+
+			</div>
+		</div>
+	</form>
+
+	<!-- hotels table -->
+	<div class="table-responsive">
+	<table class="table table-bordered table-hover">
+		<thead>
+		<tr>
+			<th>Hotel Name</th>
+			<th>City</th>
+			<th>Country</th>
+			<th>Rate</th>
+			<th>Brand</th>
+			<th>Delete</th>
+		</tr>
+		</thead>
+		<tbody>
+		<!--based on our custom Filter-->
+		<tr ng-repeat="hotel in hotels | hotelsFilter:searchFilter">
+			<td class="hotel_name" ui-sref="hotel-view({id :hotel['_id']})">{{hotel.name}}</td>
+			<td>{{hotel.address.city}}</td>
+			<td>{{hotel.address.country}}</td>
+			<td><ng-rate-it ng-model="hotel.details.starRating.val" read-only="true"></ng-rate-it></td>
+			<td>{{hotel.details.brand.txt}}</td>
+			<td><button class="btn del-button btn-warning btn-sm" data-title="Delete" ng-click="deleteApproved(hotel.name)"><span class="glyphicon glyphicon-trash"></span></button></td>
+		</tr>
+		</tbody>
+	</table>
+	</div>
+</div>

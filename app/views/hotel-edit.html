@@ -1,0 +1,74 @@
+<div class="hotel_wrapper">
+    <!--hotel head-->
+    <div class="hotel_head">
+        <h1>Edit Hotel<span ng-click="deleteHotel()" class="glyphicon glyphicon-remove"></span></h1>
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-addon">Hotel Name</span>
+        <input type="text" ng-model="hotel.name" class="form-control" placeholder="{{hotel.name}}">
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-addon">Brand</span>
+        <input type="text" ng-model="hotel.details.brand.txt" class="form-control" placeholder="{{hotel.details.brand.txt}}">
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-addon">Rank</span>
+        <input type="number" min="1" max="5" ng-model="hotel.details.starRating.val" class="form-control" placeholder="{{hotel.details.starRating.val}}">
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-addon">City</span>
+        <input type="text" ng-model="hotel.address.city" class="form-control" placeholder="{{hotel.address.city}}">
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-addon">Address</span>
+        <input type="text" ng-model="hotel.address.address" class="form-control" placeholder="{{hotel.address.address}}">
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-addon">Country</span>
+        <input type="text" ng-model="hotel.address.country" class="form-control" placeholder="{{hotel.address.country}}">
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-addon">Description</span>
+        <input type="text" ng-model="hotel.description" class="form-control" placeholder="{{hotel.description}}">
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-addon">CheckIn</span>
+        <input type="text" ng-model="hotel.details.checkIn" class="form-control" placeholder="{{hotel.details.checkIn}}">
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-addon">CheckOut</span>
+        <input type="text" ng-model="hotel.details.checkOut" class="form-control" placeholder="{{hotel.details.checkOut}}">
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-addon">Currency</span>
+        <input type="text" ng-model="hotel.details.currency" class="form-control" placeholder="{{hotel.details.currency}}">
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-addon">Rooms</span>
+        <input type="text" ng-model="hotel.details.numOfRooms" class="form-control" placeholder="{{hotel.details.numOfRooms}}">
+    </div>
+
+    <div class="input-group row amen_edits">
+        <div class="col-xs-6 col-sm-4"><span class="input-group-addon">Amenities</span></div>
+        <div class="col-xs-6 col-sm-4">
+            <select class="form-control" ng-model="selectedAmen" ng-options="amen.txt for amen in hotel.amenities"></select>
+        </div>
+        <div class="col-xs-12 col-sm-4"><input type="text" ng-model="selectedAmen.txt" class="form-control" placeholder="New Value"></div>
+    </div>
+
+    <button ng-click="saveChanges()" type="button" class="btn btn-primary btn-lg btn-block save_btn">Save</button>
+
+
+
+</div>
